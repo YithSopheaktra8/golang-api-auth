@@ -1,0 +1,10 @@
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=postgres123
+DB_NAME=go_auth
+DB_SSLMODE=disable
+
+JWT_SECRET=my-secret-key-change-this
+JWT_EXPIRE=24h
+JWT_REFRESH_EXPIRE=168h
