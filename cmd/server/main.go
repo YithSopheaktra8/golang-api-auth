@@ -14,6 +14,7 @@ func main() {
 
 	config.DB.AutoMigrate(
 		&model.User{},
+		&model.RefreshToken{},
 	)
 
 	router := routes.SetupRouter()

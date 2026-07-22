@@ -1,5 +1,6 @@
 package dto
 
-type AuthResponse struct {
-	Token string `json:"token"`
+type LoginResponse struct {
+	AccessToken  string `json:"access_token"`
+	RefreshToken string `json:"-"` //This prevents the refresh token from ever being serialized into JSON.
 }

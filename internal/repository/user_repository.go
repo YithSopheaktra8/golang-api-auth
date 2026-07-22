@@ -36,3 +36,21 @@ func (r *UserRepository) FindByEmail(
 	return &user, err
 
 }
+
+func (r *UserRepository) FindByID(
+	id string,
+) (*model.User, error) {
+
+	var user model.User
+
+	err := config.DB.
+		Where(
+			"id = ?",
+			id,
+		).
+		First(&user).
+		Error
+
+	return &user, err
+
+}
